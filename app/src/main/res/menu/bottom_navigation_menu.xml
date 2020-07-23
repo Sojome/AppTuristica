@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tsearch"
+        android:icon="@drawable/search"
+        android:title="@string/tab_search"/>
+    <item
+        android:id="@+id/tprofile"
+        android:icon="@drawable/profile"
+        android:title="@string/tab_profile"/>
+    <item
+        android:id="@+id/thome"
+        android:icon="@drawable/home"
+        android:title="@string/tab_home"/>
+    <item
+        android:id="@+id/tcamera"
+        android:icon="@drawable/camera"
+        android:title="@string/tab_camera"/>
+    <item
+        android:id="@+id/tfavorite"
+        android:icon="@drawable/star"
+        android:title="@string/tab_favorite"/>
+</menu>
