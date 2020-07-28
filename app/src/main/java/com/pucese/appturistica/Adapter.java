@@ -51,7 +51,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             myText1 = itemView.findViewById(R.id.userNameCard);
             myText2 = itemView.findViewById(R.id.timeCard);
             myText3 = itemView.findViewById(R.id.likeNumberCard);
-            myimage = itemView.findViewById(R.id.pictureCards);
+            myimage = itemView.findViewById(R.id.pictureCard);
         }
     }
 }

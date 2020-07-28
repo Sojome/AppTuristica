@@ -27,4 +27,11 @@
     <dimen name="margintop_usernametoolbarprofile">240dp</dimen>
     <dimen name="limitY_usernametoolbarprofile">10dp</dimen>
     <dimen name="margintoptargety_usernametoolbarprofile">15dp</dimen>
+    <dimen name="appbarlayout_heigth">256dp</dimen>
+    <dimen name="textsize_usernamedetail">25sp</dimen>
+    <dimen name="textsize_likenumberdetail">15sp</dimen>
+    <dimen name="marginleft_secondword">7dp</dimen>
+    <dimen name="height_divider">1dp</dimen>
+    <dimen name="paddingtop_titleimagedetail">20dp</dimen>
+    <dimen name="paddingtop_horizontal_textcontentdetail">35dp</dimen>
 </resources>

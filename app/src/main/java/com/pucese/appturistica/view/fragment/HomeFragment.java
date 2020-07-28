@@ -12,54 +12,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.pucese.appturistica.R;
+import com.pucese.appturistica.adapter.PictureAdapterRecyclerView;
+import com.pucese.appturistica.model.Picture;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- *
  */
 public class HomeFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,7 +37,24 @@ public class HomeFragment extends Fragment {
         RecyclerView picturesRecycler=(RecyclerView) view.findViewById(R.id.pictureRecycler);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        picturesRecycler.setLayoutManager(linearLayoutManager);
+        PictureAdapterRecyclerView pictureAdapterRecyclerView=new PictureAdapterRecyclerView(buidPictures(),R.layout.cardview_picture,getActivity() );
+        picturesRecycler.setAdapter(pictureAdapterRecyclerView);
         return view;
+
+    }
+    public ArrayList<Picture> buidPictures()
+    {
+        ArrayList<Picture> pictures =new ArrayList<>();
+        pictures.add(new Picture("https://fotosnginx.vive1.com/thumbs/s/358x230xC/s3.amazonaws.com/fvive1/production/image/property/90/240790/240790__2343765.jpg",
+                "Aaron Jaramillo","3 dias","3 Me gusta"));
+        pictures.add(new Picture("https://i.ytimg.com/vi/5DhZgQtDFzA/maxresdefault.jpg",
+                "Hotel Tonsupa","3 dias","4 Me gusta"));
+        pictures.add(new Picture("https://www.pucese.edu.ec/wp-content/uploads/2018/12/DSC09138OK.jpg",
+                "Jornadas Sistemas","3 dias","7 Me Gusta"));
+        pictures.add(new Picture("https://www.pucese.edu.ec/wp-content/uploads/2019/06/DSC00090.jpg",
+                "Jornadas PUCESE","3 dias","2 Me gusta"));
+        return pictures;
     }
 
     public void showToolbar(String tittle, boolean upButton,View view)
@@ -80,4 +64,5 @@ public class HomeFragment extends Fragment {
         ((AppCompatActivity)getActivity() ).getSupportActionBar().setTitle(tittle);
         ((AppCompatActivity)getActivity() ).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
     }
+
 }
