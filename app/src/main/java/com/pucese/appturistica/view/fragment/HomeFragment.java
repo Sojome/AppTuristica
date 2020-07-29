@@ -48,12 +48,14 @@ public class HomeFragment extends Fragment {
         ArrayList<Picture> pictures =new ArrayList<>();
         pictures.add(new Picture("https://fotosnginx.vive1.com/thumbs/s/358x230xC/s3.amazonaws.com/fvive1/production/image/property/90/240790/240790__2343765.jpg",
                 "Aaron Jaramillo","3 dias","3 Me gusta"));
+        pictures.add(new Picture("https://www.salud.gob.ec/wp-content/uploads/2014/02/centro-de-salud-san-lorenzo.jpg",
+                "Centro de salud","20 dias","23 Me Gusta"));
+        pictures.add(new Picture("https://www.esmeraldas.gob.ec/turismo/images/rocketlauncher/home/fp-secondfullwidth/parqueinfantil.jpg",
+                "Parque infantil","6 dias","12 Me gusta"));
         pictures.add(new Picture("https://i.ytimg.com/vi/5DhZgQtDFzA/maxresdefault.jpg",
                 "Hotel Tonsupa","3 dias","4 Me gusta"));
-        pictures.add(new Picture("https://www.pucese.edu.ec/wp-content/uploads/2018/12/DSC09138OK.jpg",
-                "Jornadas Sistemas","3 dias","7 Me Gusta"));
-        pictures.add(new Picture("https://www.pucese.edu.ec/wp-content/uploads/2019/06/DSC00090.jpg",
-                "Jornadas PUCESE","3 dias","2 Me gusta"));
+        pictures.add(new Picture("https://i.ytimg.com/vi/5DhZgQtDFzA/maxresdefault.jpg",
+                "Hotel Tonsupa","3 dias","4 Me gusta"));
         return pictures;
     }
 

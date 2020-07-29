@@ -26,7 +26,7 @@
 
     <style name="EditTextWhite" parent="TextAppearance.AppCompat">
         <item name="android:textColorHint">@color/editTextColorWhite</item>
-
+        <item name="android:textSize">@dimen/edittext_textsize_login</item>
         <item name="android:textColorPrimary">@color/editTextColorWhite</item>
         <item name="colorAccent">@color/editTextColorWhite</item>
         <item name="colorControlNormal">@color/editTextColorWhite</item>
@@ -35,7 +35,7 @@
 
     <style name="EditTextBlack" parent="TextAppearance.AppCompat">
         <item name="android:textColorHint">@color/editTextColorBlack</item>
-
+        <item name="android:textSize">@dimen/edittext_textsize_login</item>
         <item name="android:textColorPrimary">@color/editTextColorBlack</item>
         <item name="colorAccent">@color/editTextColorBlack</item>
         <item name="colorControlNormal">@color/editTextColorBlack</item>

@@ -65,7 +65,7 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="@dimen/like_margintop_card"
                     >
-                    <CheckBox
+                    <androidx.appcompat.widget.AppCompatCheckBox
                         android:id="@+id/likeCheckCard"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
