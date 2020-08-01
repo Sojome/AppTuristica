@@ -46,16 +46,47 @@ public class HomeFragment extends Fragment {
     public ArrayList<Picture> buidPictures()
     {
         ArrayList<Picture> pictures =new ArrayList<>();
-        pictures.add(new Picture("https://fotosnginx.vive1.com/thumbs/s/358x230xC/s3.amazonaws.com/fvive1/production/image/property/90/240790/240790__2343765.jpg",
-                "Aaron Jaramillo","3 dias","3 Me gusta"));
-        pictures.add(new Picture("https://www.salud.gob.ec/wp-content/uploads/2014/02/centro-de-salud-san-lorenzo.jpg",
-                "Centro de salud","20 dias","23 Me Gusta"));
-        pictures.add(new Picture("https://www.esmeraldas.gob.ec/turismo/images/rocketlauncher/home/fp-secondfullwidth/parqueinfantil.jpg",
-                "Parque infantil","6 dias","12 Me gusta"));
-        pictures.add(new Picture("https://i.ytimg.com/vi/5DhZgQtDFzA/maxresdefault.jpg",
-                "Hotel Tonsupa","3 dias","4 Me gusta"));
-        pictures.add(new Picture("https://i.ytimg.com/vi/5DhZgQtDFzA/maxresdefault.jpg",
-                "Hotel Tonsupa","3 dias","4 Me gusta"));
+        pictures.add(new Picture("https://i.postimg.cc/yD6kBYGN/cevicheria-lider.jpg",
+                "Cevicheria Lider","12 dias","45 Me gusta","Es una cevicheria",
+                "Oe5h & Óceano Índico, Quito 170148, Ecuador, Piso 2 CASA DE 4 PISOSCOLOR AMAE PICANTERIARILLO CON LETREO D , Pichincha 170148"));
+
+        pictures.add(new Picture("https://i.postimg.cc/WDhzFYTL/cisne.jpg",
+                "Hotel Cisne","20 dias","30 Me gusta","Es un hotel",
+                "Moderno, confortable y familiar las instalaciones del hotel han sido concebidas con la idea de compaginar las " +
+                        "necesidades de los viajes de negocios y turismo con la confortable atención de un servicio esmerado."));
+
+        pictures.add(new Picture("https://i.postimg.cc/wRJstf5T/esmeraldas-playa.jpg",
+                "Playa de Esmeraldas","3 dias","4 Me gusta","Es una playa",
+                "Las playas son sistemas dinámicos de arena, agua, flora y fauna en constante cambio." +
+                        "Como destinos para nadar, surfear, ir con amigos, relajarse y observar hermosos atardeceres, " +
+                        "nuestras playas ofrecen infinidad de momentos placenteros."));
+
+        pictures.add(new Picture("https://i.postimg.cc/w3hvmm8v/gran-aki.jpg",
+                "Gran Aki","43 dias","54 Me gusta","Es un lugar para comprar",
+                "En 2007 se crea Gran Akí. Gran Akí es parte de la división de la cadena \"Akí\" dirigido al público popular," +
+                        "incorpora a su línea de oferta productos para el hogar," +
+                        "juguetería, vestido, ferretería, electrodomésticos y entretenimiento, en una suerte de tienda departamental."));
+
+        pictures.add(new Picture("https://i.postimg.cc/GTJmwZJY/muisne.jpg",
+                "Playa de muisne","12 dias","13 Me gusta","Es una playa",
+                "Las playas son sistemas dinámicos de arena, agua, flora y fauna en constante cambio." +
+                        "Como destinos para nadar, surfear, ir con amigos, relajarse y observar hermosos atardeceres," +
+                        "nuestras playas ofrecen infinidad de momentos placenteros."));
+
+        pictures.add(new Picture("https://i.postimg.cc/xJmdgkX6/municipio.jpg",
+                "Municipio","71 dias","11 Me gusta","Es un edificio publico",
+                "Nacimos en el corazón del Pueblo Esmeraldeño, haciendo de nuestras ilusiones y esperanzas," +
+                        "la motivación que se necesita para continuar construyendo el próspero presente que Esmeraldas necesita."));
+
+        pictures.add(new Picture("https://i.postimg.cc/Rqntbhr5/pacomiler.png",
+                "PacoMiler","43 dias","76 Me gusta","Es una licorería",
+                "El licor es una bebida alcohólica obtenida por maceración en aguardiente de hierbas o frutos, que a veces son endulzados con sacarosa," +
+                        "azúcar de uva, mosto o miel, con una riqueza en azúcares superior a 100 gramos/litro."));
+
+        pictures.add(new Picture("https://i.postimg.cc/87wfrrvW/terminal.jpg",
+                "Terminal Terrestre de Esmeraldas","35 dias","9 Me gusta","Es un terminal terrestre",
+                "Existen espacios que suelen convertirse en la cara oculta de las urbes a pesar de la importancia que tienen en el diario vivir de sus habitantes."));
+
         return pictures;
     }
 

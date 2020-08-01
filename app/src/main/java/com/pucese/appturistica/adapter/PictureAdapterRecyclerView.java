@@ -1,7 +1,6 @@
 package com.pucese.appturistica.adapter;
 
 import android.app.Activity;
-        import android.app.ActivityOptions;
         import android.content.Intent;
         import android.os.Build;
         import android.transition.Explode;
@@ -12,7 +11,8 @@ import android.app.Activity;
         import android.widget.TextView;
 
         import androidx.annotation.NonNull;
-        import androidx.core.app.ActivityOptionsCompat;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityOptionsCompat;
         import androidx.recyclerview.widget.RecyclerView;
 
         import com.pucese.appturistica.R;
@@ -21,7 +21,6 @@ import android.app.Activity;
         import com.squareup.picasso.Picasso;
 
         import java.util.ArrayList;
-        import java.util.List;
 
 public class PictureAdapterRecyclerView extends  RecyclerView.Adapter<PictureAdapterRecyclerView.PictureViewHolder>
 {
@@ -57,6 +56,11 @@ public class PictureAdapterRecyclerView extends  RecyclerView.Adapter<PictureAda
             {
                 Intent intent=new Intent(activity, PictureDetailActivity.class);
                 intent.putExtra("picture",picture.getPicture());
+                intent.putExtra("name",picture.getUsername());
+                intent.putExtra("time",picture.getTime());
+                intent.putExtra("like",picture.getLike_number());
+                intent.putExtra("description",picture.getDescription());
+                intent.putExtra("titulo",picture.getTitleImage());
                 if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
                 {
                     Explode explode=new Explode();
@@ -68,8 +72,6 @@ public class PictureAdapterRecyclerView extends  RecyclerView.Adapter<PictureAda
                 }else {
                     activity.startActivity(intent);
                 }
-
-
             }
         });
 
@@ -83,18 +85,17 @@ public class PictureAdapterRecyclerView extends  RecyclerView.Adapter<PictureAda
     public class PictureViewHolder extends RecyclerView.ViewHolder
     {
         private ImageView picturecard;
-        private TextView usernameCard;
-        private TextView timeCard;
-        private TextView likeNumberCard;
+        private TextView usernameCard, timeCard, likeNumberCard, description, titulo;
 
-        public PictureViewHolder(@NonNull View itemView)
+        public PictureViewHolder(@Nullable View itemView)
         {
             super(itemView);
             picturecard=(ImageView) itemView.findViewById(R.id.pictureCard);
             usernameCard=(TextView) itemView.findViewById(R.id.userNameCard);
             timeCard=(TextView) itemView.findViewById(R.id.timeCard);
             likeNumberCard=(TextView) itemView.findViewById(R.id.likeNumberCard);
-
+            description=(TextView) itemView.findViewById(R.id.textContentImageDetail);
+            titulo=(TextView) itemView.findViewById(R.id.titleImage);
         }
     }
 }

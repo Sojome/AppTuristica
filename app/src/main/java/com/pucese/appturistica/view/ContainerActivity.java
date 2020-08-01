@@ -81,7 +81,6 @@ public class ContainerActivity extends AppCompatActivity {
                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                                 .addToBackStack(null).commit();
                         break;
-
                 }
             }
         });*/
