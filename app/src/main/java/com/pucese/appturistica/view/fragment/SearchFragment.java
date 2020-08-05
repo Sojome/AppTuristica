@@ -6,9 +6,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.pucese.appturistica.R;
 import com.pucese.appturistica.adapter.PictureAdapterRecyclerView;
@@ -17,6 +20,11 @@ import com.pucese.appturistica.model.Picture;
 import java.util.ArrayList;
 
 public class SearchFragment extends Fragment {
+
+    EditText etBuscador;
+    RecyclerView picturesRecycler;
+    PictureAdapterRecyclerView pictureAdapterRecyclerView;
+    ArrayList<Picture> pictures;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -27,18 +35,44 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_search,container,false);
-        RecyclerView picturesRecycler=(RecyclerView) view.findViewById(R.id.search_recyclerview_photos);
+        picturesRecycler=(RecyclerView) view.findViewById(R.id.search_recyclerview_photos);
+
+        etBuscador = view.findViewById(R.id.etBuscador);
+
         GridLayoutManager linearLayoutManager=new GridLayoutManager(getContext(),2);
 
         picturesRecycler.setLayoutManager(linearLayoutManager);
-        PictureAdapterRecyclerView pictureAdapterRecyclerView=new PictureAdapterRecyclerView(buidPictures(),R.layout.cardview_picture,getActivity() );
+        pictureAdapterRecyclerView=new PictureAdapterRecyclerView(buidPictures(),R.layout.cardview_picture,getActivity() );
         picturesRecycler.setAdapter(pictureAdapterRecyclerView);
+
+
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        etBuscador.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filtrar(s.toString());
+            }
+        });
     }
 
     public ArrayList<Picture> buidPictures()
     {
-        ArrayList<Picture> pictures =new ArrayList<>();
+        pictures =new ArrayList<>();
         pictures.add(new Picture("https://i.postimg.cc/yD6kBYGN/cevicheria-lider.jpg",
                 "Cevicheria Lider","12 dias","45 Me gusta","Es una cevicheria",
                 "Oe5h & Óceano Índico, Quito 170148, Ecuador, Piso 2 CASA DE 4 PISOSCOLOR AMAE PICANTERIARILLO CON LETREO D , Pichincha 170148"));
@@ -81,5 +115,17 @@ public class SearchFragment extends Fragment {
                 "Existen espacios que suelen convertirse en la cara oculta de las urbes a pesar de la importancia que tienen en el diario vivir de sus habitantes."));
 
         return pictures;
+    }
+
+    public void filtrar(String texto) {
+        ArrayList<Picture> filtrarLista = new ArrayList<>();
+
+        for(Picture usuario : pictures) {
+            if(usuario.getUsername().toLowerCase().contains(texto.toLowerCase())) {
+                filtrarLista.add(usuario);
+            }
+        }
+
+        pictureAdapterRecyclerView.filtrar(filtrarLista);
     }
 }

@@ -7,18 +7,7 @@
     tools:context=".view.fragment.SearchFragment"
 
     >
-    <include layout="@layout/actionbar_toolbar"/>
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/input_SearchText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/fab_margin"
-        android:layout_marginLeft="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:elevation="100dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:defaultQueryHint="Buscar........"
-        />
+    <include layout="@layout/actionbar_toolbar_search"/>
 
 
     <LinearLayout
