@@ -8,6 +8,8 @@
     android:layout_height="@dimen/height_cardview"
     cardview:cardCornerRadius="@dimen/cornerradius_cardview"
     android:layout_marginBottom="@dimen/activity_vertival_margin"
+    android:layout_marginTop="10dp"
+    android:layout_margin="10dp"
     >
 
         <FrameLayout

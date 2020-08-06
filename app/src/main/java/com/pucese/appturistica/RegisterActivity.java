@@ -115,13 +115,13 @@ public class RegisterActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(tittle);
         getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        /*toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 finish();
             }
-        });
+        });*/
     }
     public void onStart() {
         super.onStart();

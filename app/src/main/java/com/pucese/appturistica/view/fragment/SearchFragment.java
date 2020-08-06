@@ -16,6 +16,7 @@ import android.widget.EditText;
 import com.pucese.appturistica.R;
 import com.pucese.appturistica.adapter.PictureAdapterRecyclerView;
 import com.pucese.appturistica.model.Picture;
+import com.pucese.appturistica.view.GridSpacingItemDecoration;
 
 import java.util.ArrayList;
 
@@ -42,6 +43,12 @@ public class SearchFragment extends Fragment {
         GridLayoutManager linearLayoutManager=new GridLayoutManager(getContext(),2);
 
         picturesRecycler.setLayoutManager(linearLayoutManager);
+        //---------------En caso que quieran
+        /*int spanCount = 2; // 2 columns
+        int spacing = 16; // 20px
+        boolean includeEdge = false;
+        picturesRecycler.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));*/
+        //---------------
         pictureAdapterRecyclerView=new PictureAdapterRecyclerView(buidPictures(),R.layout.cardview_picture,getActivity() );
         picturesRecycler.setAdapter(pictureAdapterRecyclerView);
 

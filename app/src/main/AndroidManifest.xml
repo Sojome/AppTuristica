@@ -20,7 +20,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".InicioSesionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
